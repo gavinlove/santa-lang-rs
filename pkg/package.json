@@ -1,0 +1,11 @@
+{
+  "name": "santa-wasm",
+  "version": "0.0.1",
+  "files": [
+    "santa_lang_bg.wasm",
+    "santa_lang.js",
+    "santa_lang.d.ts"
+  ],
+  "browser": "santa_lang.js",
+  "types": "santa_lang.d.ts"
+}
