@@ -1029,7 +1029,7 @@ If the start value is greater than the end value then a <em>-1</em> step is appl
 let desc_inc_range = 2..=-2;
 </code></pre>
 <pre><code>let to = 5;
-let inc_range_using_expr = (0 + 1)..to;
+let inc_range_using_expr = (0 + 1)..=to;
 </code></pre>
 <h4 id="infinite-range">Infinite Range</h4>
 <p>Lazily evaluates an infinite Integer range from a given start value, using <em>+1</em> step each iteration.</p>
@@ -1057,7 +1057,7 @@ set |&gt; push(4); // {1, 2, 3, 4};
 set; // {1, 2, 3}
 </code></pre>
 <p>Most types can be stored within a Set, except for Lazy Sequences and Functions.</p>
-<pre><code>let set = #{1, || 1}; // Error
+<pre><code>let set = {1, || 1}; // Error
 </code></pre>
 <h4 id="map">Map</h4>
 <p>Represents an unordered association between arbitrary keys and values.</p>
@@ -1122,7 +1122,7 @@ let hash_map = #{attempted_key: &quot;one&quot;}; // Error
 <p>Variables are declared using let-binding syntax, with names conforming to <code>[a-Z][a-Z0-9_?]+</code>.
 Bindings are immutable by-default, and can not be reassigned after declaration.</p>
 <pre><code>let x = 1;
-x = 2; // Variable x is not mutable
+x = 2; // Variable 'x' is not mutable
 </code></pre>
 <p>Variables can be made mutable using the <code>mut</code> keyword, allowing for the binding to be reassigned after declaration.</p>
 <pre><code>let mut x = 1;
@@ -1133,7 +1133,7 @@ x = 2;
 The <code>_</code> placeholder symbol is used to denote an ignored positional binding.
 The <code>..</code> rest symbol is used to collect all the remaining elements into a single <em>List</em> let-binding.</p>
 <pre><code>let [x, y, _, ..z] = [1, 2, 3, 4, 5];
-[x, y, z]; // [1, 2, [4, 5]]
+[x, y, z];
 </code></pre>
 <p>Similar to previous let-bindings, these are immutable by-default.
 Destructed bindings can be made mutable using the <code>mut</code> keyword.</p>
@@ -1149,16 +1149,16 @@ x = 2;
 &quot;a&quot; + &quot;b&quot;; // &quot;ab&quot;
 [1] + [2, 3]; // [1, 2, 3]
 {1} + {1, 2}; // {1, 2}
-#{1: &quot;one&quot;} + {2: &quot;two&quot;}; // #{1: &quot;one&quot;, 2: &quot;two}
+#{1: &quot;one&quot;} + #{2: &quot;two&quot;}; // #{1: &quot;one&quot;, 2: &quot;two}
 </code></pre>
 <pre><code>2 - 1; // 1
-2 - 1.5; // 0
+2 - 1.5; // 1
 1.5 - 1.25; // 0.25
 1.5 - 1; // 0.50
 {1, 2} - {1}; // {2}
 </code></pre>
 <pre><code>2 * 2; // 4
-2.2 * 2; // 4
+2.2 * 2; // 4.4
 &quot;a&quot; * 3; // &quot;aaa&quot;
 [&quot;a&quot;] * 2; // [&quot;a&quot;, &quot;a&quot;]
 </code></pre>
@@ -1204,9 +1204,11 @@ list[4]; // nil
 list[-5]; // nil
 </code></pre>
 <p>List slices can be achieved by-way of inclusive/exclusive range indexing.</p>
-<pre><code>list[1..2]; // [2]
+<pre><code>let list = [1, 2, 3, 4];
+
+list[1..2]; // [2]
 list[1..=2]; // [2, 3]
-list[1..=-1]; // [1, 4]
+list[1..=-1]; // [2, 1, 4]
 </code></pre>
 <h3 id="map_1">Map</h3>
 <p>Map values can be found via their associated key.
@@ -1223,13 +1225,15 @@ The returned element is the single UTF-8 character as represented as a String.</
 
 str[0]; // &quot;h&quot;
 str[-1]; // &quot;o&quot;
-str[4]; // nil
-str[-5]; // nil
+str[5]; // nil
+str[-6]; // nil
 </code></pre>
 <p>String slices can be achieved by-way of inclusive/exclusive range indexing.</p>
-<pre><code>str[1..2]; // &quot;e&quot;
-str[1..=2]; // &quot;ll&quot;
-str[1..=-1]; // &quot;ho&quot;
+<pre><code>let str = &quot;hello&quot;;
+
+str[1..2]; // &quot;e&quot;
+str[1..=2]; // &quot;el&quot;
+str[1..=-1]; // &quot;eho&quot;
 </code></pre>
 <h2 id="control-structures">Control Structures</h2>
 <h3 id="if">If</h3>
@@ -1242,11 +1246,11 @@ Following block expression semantics found elsewhere in the language, unless exp
 if 10 &lt; 5 { 1 } // nil
 </code></pre>
 <p>Expression with both a consequence and alternative <code>else</code> branch.</p>
-<pre><code>if 10 &lt; 5 { 1 } else { 2 } // 2
+<pre><code>if 10 &lt; 5 { 1 } else { 2 }
 </code></pre>
 <p>Let-bindings can be declared within the predicate expressions.
 If the binding is <em>truthy</em> then the variables is bound and available with the consequence branch.</p>
-<pre><code>if let x = 10 { x } else { 20 } // 10
+<pre><code>if let x = 10 { x } else { 20 }
 </code></pre>
 <h3 id="return">Return</h3>
 <p>If you wish to return early from a block expression this can be achieved using the <code>return</code> keyword.</p>
@@ -1262,7 +1266,7 @@ ten(5);
 <p>If you wish to break early from a <a href="../builtins/">builtin</a> looping construct (i.e <code>fold</code>, <code>reduce</code>, <code>each</code>) this can be achieved with the <code>break</code> keyword.
 In the example below the reduction will be terminated prematurely and the <em>break</em> value will be returned.</p>
 <pre><code>0.. |&gt; reduce |acc, value| {
-  if acc == 10 {
+  if value == 10 {
     break acc
   } else {
     acc + value
@@ -1291,8 +1295,8 @@ map(_ + 1, [1, 2, 3]);
 <p>Values within Integer ranges can be matched upon.</p>
 <pre><code>let number = |n| match n {
   0..5 { &quot;&lt; 5&quot; },
-  6..=7 { &quot;6 or 7&quot; }
-  8.. { &quot;&gt;= 8&quot; }
+  5..=6 { &quot;5 or 6&quot; }
+  7.. { &quot;&gt;= 7&quot; }
 };
 number(5);
 </code></pre>
@@ -1323,12 +1327,13 @@ inc(1);
 <p>This also highlights use of operators being passed around as first-class functions.</p>
 </blockquote>
 <p>The placeholder <code>_</code> symbol can also be used to positional omit parameters in which you wish to leave open for the newly created function.</p>
-<pre><code>let dec = -(_, 1);
+<pre><code>let minus = -;
+let dec = minus(_, 1);
 dec(2);
 </code></pre>
 <p>Alternatively binary functions (functions which take two arguments) can be more succinctly written using the following placeholder syntax, borrowed from Scala.</p>
-<pre><code>let inc = 1 + \_;
-let dec = \_ - 1;
+<pre><code>let inc = 1 + _;
+let dec = _ - 1;
 inc(1) == dec(3);
 </code></pre>
 <p>All functions which are declared are Closures, and have access to their outer scope variables.</p>
@@ -1344,7 +1349,7 @@ fibonacci_seq();
 fibonacci_seq();
 </code></pre>
 <p>Function arguments can be <em>spread</em> from a List, as well as parameters be collected <em>rest</em> into a List.</p>
-<pre><code>let max = |xs..| xs |&gt; sort(&gt;) |&gt; first;
+<pre><code>let max = |..xs| xs |&gt; sort(&lt;) |&gt; first;
 max(..[1, 2, 3]);
 </code></pre>
 <h3 id="recursion">Recursion</h3>
@@ -1365,7 +1370,7 @@ factorial(10);
 </code></pre>
 <h3 id="composition">Composition</h3>
 <p>Functions can be <a href="https://en.wikipedia.org/wiki/Function_composition">composed</a> together using the <code>&gt;&gt;</code> syntax.</p>
-<pre><code>let inc_dbl = \_ + 1 &gt;&gt; |x| x * x;
+<pre><code>let inc_dbl = _ + 1 &gt;&gt; |x| x * x;
 inc_dbl(15);
 </code></pre>
 <pre><code>let parse = lines &gt;&gt; map(split(&quot;,&quot;) &gt;&gt; map(int));
@@ -1387,9 +1392,9 @@ parse(&quot;1,2\n3,4\n5,6&quot;);
 <h3 id="trailing-lambda">Trailing Lambda</h3>
 <p>If the last parameter of a function is a function, then a lambda expression passed as the corresponding argument can be placed outside the parentheses.
 Inspired by <a href="https://kotlinlang.org/docs/lambdas.html#passing-trailing-lambdas">Kotlin</a>, this improves readability and enables rich DSLs to be built on-top of language constructs.</p>
-<pre><code>let mut acc = 0;
+<pre><code>let mut acc = 1;
 [1, 2, 3] |&gt; each |x| {
-  acc = acc + x;
+  acc = acc + x * x;
 }
 acc;
 </code></pre>
@@ -1398,7 +1403,9 @@ acc;
 };
 </code></pre>
 <p>This is syntactic sugar on top of the following expressions.</p>
-<pre><code>each(|x| { puts(x) }, [1, 2, 3]);
+<pre><code>let mut acc = 1;
+each(|x| { acc = acc + x * x; }, [1, 2, 3]);
+acc;
 </code></pre>
 <pre><code>fold(1, |acc, x| acc + x * x, [1, 2, 3]);
 </code></pre>
