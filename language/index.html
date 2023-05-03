@@ -310,8 +310,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#infinite-range" class="md-nav__link">
-    Infinite Range
+  <a href="#unbounded-range" class="md-nav__link">
+    Unbounded Range
   </a>
   
 </li>
@@ -748,8 +748,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#infinite-range" class="md-nav__link">
-    Infinite Range
+  <a href="#unbounded-range" class="md-nav__link">
+    Unbounded Range
   </a>
   
 </li>
@@ -995,6 +995,13 @@
 
 
 <h1 id="language">Language</h1>
+<ul>
+<li>Everything is an expression.</li>
+<li>Everything is an function (mostly).</li>
+<li>Semicolons are optional.</li>
+<li>Block expressions implicitly return the last statement as their result, unless an explicit <code>return</code> is used.</li>
+</ul>
+<p>There is a <a href="https://eddmann.com/posts/designing-santa-lang-a-language-for-solving-advent-of-code-puzzles/">write-up</a> detailing the design decisions that went into creating the langauge.</p>
 <h2 id="types">Types</h2>
 <h3 id="integer">Integer</h3>
 <p>Represents Integer values, stored as a 64-bit signed number.</p>
@@ -1031,7 +1038,7 @@ let desc_inc_range = 2..=-2;
 <pre><code>let to = 5;
 let inc_range_using_expr = (0 + 1)..=to;
 </code></pre>
-<h4 id="infinite-range">Infinite Range</h4>
+<h4 id="unbounded-range">Unbounded Range</h4>
 <p>Lazily evaluates an infinite Integer range from a given start value, using <em>+1</em> step each iteration.</p>
 <pre><code>let inf_range = 1..;
 let neg_inf_range = -5..;
@@ -1073,7 +1080,28 @@ hash_map; // #{&quot;a&quot;: 1}
 let hash_map = #{attempted_key: &quot;one&quot;}; // Error
 </code></pre>
 <h3 id="lazy-sequence">Lazy Sequence</h3>
-<p>TODO</p>
+<p>The language supports the concept of Lazy Sequences, which among other benefits, unlock the ability to produce infinite sequences.
+Both bounded (inclusive, exclusive) and unbounded (infinite) <a href="#range">Ranges</a> are examples of an Lazy Sequence.
+Functions (such as <code>filter</code> and <code>map</code>) are applied <strong>only</strong> when required, in the example below when we invoke <code>take</code>.</p>
+<pre><code>1.. |&gt; filter(|n| n % 2 == 0) |&gt; take(5);
+</code></pre>
+<p>The sequence is an immutable definition of desired computation and can be shared.</p>
+<pre><code>let lazy_seq = zip(1.., 2..) |&gt; map(|[x, y]| x * y);
+[
+  lazy_seq |&gt; skip(5) |&gt; first,
+  lazy_seq |&gt; first
+];
+</code></pre>
+<p>Their are several other means of generating a Lazy Sequence:</p>
+<p>Iterate takes a pure function and applies the previous result (starting with an initial value) upon each iteration.</p>
+<pre><code>iterate(|[a, b]| [b, a + b], [0, 1]) |&gt; find(|[a]| a &gt; 10);
+</code></pre>
+<p>Cycle iterates through a List indefinitely, looping back to the start once exhausted.</p>
+<pre><code>cycle([1, 2, 3]) |&gt; skip(1) |&gt; take(3);
+</code></pre>
+<p>Repeat iterates over the same value indefinitely.</p>
+<pre><code>repeat(&quot;a&quot;) |&gt; take(3);
+</code></pre>
 <h2 id="truthy-semantics">Truthy Semantics</h2>
 <p>Values can be evaluated to a Boolean within predicate expressions using the <em>truthy</em> semantic rules below:</p>
 <table>
