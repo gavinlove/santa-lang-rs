@@ -6,16 +6,20 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="An functional, C-like programming language for solving Advent of Code puzzles.">
+      
+      
+        <meta name="author" content="Edd Mann">
       
       
       
-        <link rel="prev" href="../examples/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../runner/">
+        <link rel="next" href="../builtins/">
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.9">
     
     
       
@@ -23,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
       
       
 
@@ -139,6 +143,18 @@
 </div>
     
     
+      <div class="md-header__source">
+        <a href="https://github.com/eddmann/santa-lang-rs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
   </nav>
   
 </header>
@@ -172,6 +188,18 @@
     [WIP] santa-lang
   </label>
   
+    <div class="md-nav__source">
+      <a href="https://github.com/eddmann/santa-lang-rs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
   <ul class="md-nav__list" data-md-scrollfix>
     
       
@@ -184,21 +212,6 @@
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
         Home
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
-        Examples
       </a>
     </li>
   
@@ -246,94 +259,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-    <nav class="md-nav" aria-label="Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#types" class="md-nav__link">
     Types
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persistent-immutable-data-structures" class="md-nav__link">
-    Persistent (Immutable) data-structures
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-slicing" class="md-nav__link">
-    List Slicing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#let-bindings" class="md-nav__link">
-    Let bindings
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditionals-with-let-bindings" class="md-nav__link">
-    Conditionals (with let bindings)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#functions-functions-functions" class="md-nav__link">
-    Functions, functions, functions!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-composition-and-threading" class="md-nav__link">
-    Function composition and threading
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invocation-with-trailing-lambdas" class="md-nav__link">
-    Invocation with trailing lambdas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infix-function-calls" class="md-nav__link">
-    Infix function calls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lazy-sequences" class="md-nav__link">
-    Lazy sequences
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recursion" class="md-nav__link">
-    Recursion
-  </a>
-  
-    <nav class="md-nav" aria-label="Recursion">
+    <nav class="md-nav" aria-label="Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tail-call-optimization" class="md-nav__link">
-    Tail-call optimization
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decimal" class="md-nav__link">
+    Decimal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+    <nav class="md-nav" aria-label="Range">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exclusive-range" class="md-nav__link">
+    Exclusive Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inclusive-range" class="md-nav__link">
+    Inclusive Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-range" class="md-nav__link">
+    Infinite Range
   </a>
   
 </li>
@@ -344,22 +322,199 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#closures" class="md-nav__link">
-    Closures
+  <a href="#collection" class="md-nav__link">
+    Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-matching" class="md-nav__link">
-    Pattern matching
+  <a href="#set" class="md-nav__link">
+    Set
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spread-and-rest-operators" class="md-nav__link">
-    Spread and rest operators
+  <a href="#map" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazy-sequence" class="md-nav__link">
+    Lazy Sequence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truthy-semantics" class="md-nav__link">
+    Truthy Semantics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destructing" class="md-nav__link">
+    Destructing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing" class="md-nav__link">
+    Indexing
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_1" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_1" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_1" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-structures" class="md-nav__link">
+    Control Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="Control Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    If
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    Return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    Break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match" class="md-nav__link">
+    Match
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursion" class="md-nav__link">
+    Recursion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composition" class="md-nav__link">
+    Composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threading" class="md-nav__link">
+    Threading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailing-lambda" class="md-nav__link">
+    Trailing Lambda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infix-invocation" class="md-nav__link">
+    Infix invocation
   </a>
   
 </li>
@@ -372,8 +527,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#detailed-error-handling" class="md-nav__link">
-    Detailed error handling
+  <a href="#builtins" class="md-nav__link">
+    Builtins
   </a>
   
 </li>
@@ -399,8 +554,23 @@
   
   
     <li class="md-nav__item">
+      <a href="../builtins/" class="md-nav__link">
+        Builtins
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../runner/" class="md-nav__link">
-        AoC Runner
+        Runner
       </a>
     </li>
   
@@ -443,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runtimes/cli/" class="md-nav__link">
+      <a href="../cli/" class="md-nav__link">
         CLI
       </a>
     </li>
@@ -457,8 +627,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../runtimes/lambda/" class="md-nav__link">
-        Lambda
+      <a href="../wasm/" class="md-nav__link">
+        WebAssembly
       </a>
     </li>
   
@@ -471,8 +641,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../runtimes/wasm/" class="md-nav__link">
-        WebAssembly
+      <a href="../lambda/" class="md-nav__link">
+        Lambda
       </a>
     </li>
   
@@ -481,6 +651,21 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        Examples
+      </a>
     </li>
   
 
@@ -512,94 +697,59 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    Features
-  </a>
-  
-    <nav class="md-nav" aria-label="Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#types" class="md-nav__link">
     Types
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#persistent-immutable-data-structures" class="md-nav__link">
-    Persistent (Immutable) data-structures
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#list-slicing" class="md-nav__link">
-    List Slicing
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#let-bindings" class="md-nav__link">
-    Let bindings
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conditionals-with-let-bindings" class="md-nav__link">
-    Conditionals (with let bindings)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#functions-functions-functions" class="md-nav__link">
-    Functions, functions, functions!
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-composition-and-threading" class="md-nav__link">
-    Function composition and threading
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#invocation-with-trailing-lambdas" class="md-nav__link">
-    Invocation with trailing lambdas
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#infix-function-calls" class="md-nav__link">
-    Infix function calls
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lazy-sequences" class="md-nav__link">
-    Lazy sequences
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#recursion" class="md-nav__link">
-    Recursion
-  </a>
-  
-    <nav class="md-nav" aria-label="Recursion">
+    <nav class="md-nav" aria-label="Types">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tail-call-optimization" class="md-nav__link">
-    Tail-call optimization
+  <a href="#integer" class="md-nav__link">
+    Integer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decimal" class="md-nav__link">
+    Decimal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    Range
+  </a>
+  
+    <nav class="md-nav" aria-label="Range">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exclusive-range" class="md-nav__link">
+    Exclusive Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inclusive-range" class="md-nav__link">
+    Inclusive Range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infinite-range" class="md-nav__link">
+    Infinite Range
   </a>
   
 </li>
@@ -610,22 +760,199 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#closures" class="md-nav__link">
-    Closures
+  <a href="#collection" class="md-nav__link">
+    Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    List
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#pattern-matching" class="md-nav__link">
-    Pattern matching
+  <a href="#set" class="md-nav__link">
+    Set
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#spread-and-rest-operators" class="md-nav__link">
-    Spread and rest operators
+  <a href="#map" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lazy-sequence" class="md-nav__link">
+    Lazy Sequence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#truthy-semantics" class="md-nav__link">
+    Truthy Semantics
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#destructing" class="md-nav__link">
+    Destructing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indexing" class="md-nav__link">
+    Indexing
+  </a>
+  
+    <nav class="md-nav" aria-label="Indexing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list_1" class="md-nav__link">
+    List
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map_1" class="md-nav__link">
+    Map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string_1" class="md-nav__link">
+    String
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#control-structures" class="md-nav__link">
+    Control Structures
+  </a>
+  
+    <nav class="md-nav" aria-label="Control Structures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    If
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    Return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    Break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#match" class="md-nav__link">
+    Match
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#recursion" class="md-nav__link">
+    Recursion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composition" class="md-nav__link">
+    Composition
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#threading" class="md-nav__link">
+    Threading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trailing-lambda" class="md-nav__link">
+    Trailing Lambda
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infix-invocation" class="md-nav__link">
+    Infix invocation
   </a>
   
 </li>
@@ -638,8 +965,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#detailed-error-handling" class="md-nav__link">
-    Detailed error handling
+  <a href="#builtins" class="md-nav__link">
+    Builtins
   </a>
   
 </li>
@@ -663,124 +990,348 @@
                 
                   
 
+  
+  
+
 
 <h1 id="language">Language</h1>
-<h2 id="features">Features</h2>
-<h3 id="types">Types</h3>
+<h2 id="types">Types</h2>
+<h3 id="integer">Integer</h3>
+<p>Represents Integer values, stored as a 64-bit signed number.</p>
 <pre><code>let int = 1;
-let dec = 1.5;
-let exc_range = 1..5;
-let inc_range = 1..=5;
-let inf_range = 1..;
-let string = &quot;Hello, world!\n&quot;;
-let list = [1, 2, 3];
-let hash_map = #{&quot;a&quot;: 1, 2.5: &quot;b&quot;, [1, 2, 3]: true, range};
-let set = {1, 2, 3};
+let int_with_underscores = 1_000_000;
 </code></pre>
-<h3 id="persistent-immutable-data-structures">Persistent (Immutable) data-structures</h3>
-<p>Lists, Maps and Sets are all <a href="https://en.wikipedia.org/wiki/Persistent_data_structure">persistent data-structures</a>, yielding new values upon mutation.</p>
+<h3 id="decimal">Decimal</h3>
+<p>Represents Decimal values, stored as a 64-bit floating point number (the <em>binary64</em> type defined in <a href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754-2008</a>).</p>
+<pre><code>let dec = 1.5;
+let dec_with_underscores = 1_000_000.50;
+</code></pre>
+<h3 id="string">String</h3>
+<p>Represents UTF-8 encoded character sequences, with the ability to escape newlines <code>\n</code>, tabs <code>\t</code> and quotes <code>\"</code>.</p>
+<pre><code>let str = &quot;Hello, world!&quot;;
+let escaped_str = &quot;\&quot;Hello, world!\&quot;\n&quot;;
+let str_with_unicode = &quot;❤🍕&quot;;
+</code></pre>
+<h3 id="range">Range</h3>
+<h4 id="exclusive-range">Exclusive Range</h4>
+<p>Lazily evaluates the Integer range from a given start value until (but not including) the end value.
+If the start value is greater than the end value then a <em>-1</em> step is applied each iteration.</p>
+<pre><code>let asc_exc_range = 1..5;
+let desc_exc_range = 2..-2;
+</code></pre>
+<pre><code>let until = 5;
+let exc_range_using_expr = (0 + 1)..until;
+</code></pre>
+<h4 id="inclusive-range">Inclusive Range</h4>
+<p>Lazily evaluates the Integer range from a given start value until (and including) the end value.
+If the start value is greater than the end value then a <em>-1</em> step is applied each iteration.</p>
+<pre><code>let asc_inc_range = 1..=5;
+let desc_inc_range = 2..=-2;
+</code></pre>
+<pre><code>let to = 5;
+let inc_range_using_expr = (0 + 1)..to;
+</code></pre>
+<h4 id="infinite-range">Infinite Range</h4>
+<p>Lazily evaluates an infinite Integer range from a given start value, using <em>+1</em> step each iteration.</p>
+<pre><code>let inf_range = 1..;
+let neg_inf_range = -5..;
+</code></pre>
+<h3 id="collection">Collection</h3>
+<p>Collections are <a href="https://en.wikipedia.org/wiki/Persistent_data_structure">persistent data-structures</a>, yielding new values upon mutation.</p>
+<h4 id="list">List</h4>
+<p>Represents a sequence of heterogeneous elements in insertion order.</p>
+<pre><code>let homogeneous_list = [1, 2, 3];
+let heterogeneous_list = [&quot;4&quot;, 5.0];
+</code></pre>
 <pre><code>let list = [1, 2, 3];
 list |&gt; push(4); // [1, 2, 3, 4]
 list; // [1, 2, 3]
 </code></pre>
-<pre><code>let hash_map = #{&quot;a&quot;: 1};
-hash_map |&gt; assoc(&quot;a&quot;, 2); // #{&quot;a&quot;: 2}
-hash_map; // #{&quot;a&quot;: 1}
+<h4 id="set">Set</h4>
+<p>Represents an unordered collection of unique heterogeneous elements.</p>
+<pre><code>let homogeneous_set = {1, 2, 2, 3}; // {1, 2, 3}
+let heterogeneous_set = {&quot;4&quot;, 5.0, &quot;4&quot;}; // {&quot;4&quot;, 5.0}
 </code></pre>
 <pre><code>let set = {1, 2, 3};
 set |&gt; push(4); // {1, 2, 3, 4};
 set; // {1, 2, 3}
 </code></pre>
-<p>Data-structures follow the same value semantics as Integers, Decimals and Strings.</p>
-<pre><code>[1, 2, 3] == [1, 2, 3]; // true
-[1, 2, 3] == [1, 2, 3, 4]; // false
+<p>Most types can be stored within a Set, except for Lazy Sequences and Functions.</p>
+<pre><code>let set = #{1, || 1}; // Error
 </code></pre>
-<pre><code>#{&quot;a&quot;: 1} == #{&quot;a&quot;: 1}; // true
-#{&quot;a&quot;: 1} == #{&quot;a&quot;: 1, &quot;b&quot;: 2}; // false
+<h4 id="map">Map</h4>
+<p>Represents an unordered association between arbitrary keys and values.</p>
+<pre><code>let homogeneous_map = #{&quot;a&quot;: 1, &quot;b&quot;: 2};
+let heterogeneous_map = #{[1]: 1.5, 2: true, homogeneous_map};
 </code></pre>
-<pre><code>{1, 2, 3} == {1, 2, 3}; // true
-{1, 2, 3} == {1, 2, 3, 4}; // false
+<pre><code>let hash_map = #{&quot;a&quot;: 1};
+hash_map |&gt; assoc(&quot;a&quot;, 2); // #{&quot;a&quot;: 2}
+hash_map; // #{&quot;a&quot;: 1}
 </code></pre>
-<h3 id="list-slicing">List Slicing</h3>
-<pre><code>let xs = [1, 2, 3, 4];
-
-xs[0]; // 1
-xs[-1]; // 4
-xs[1..2]; // [2]
-xs[1..=2]; // [2, 3]
+<p>Most types can be used as Map keys, except for Lazy Sequences and Functions.</p>
+<pre><code>let attempted_key = || 1;
+let hash_map = #{attempted_key: &quot;one&quot;}; // Error
 </code></pre>
-<h3 id="let-bindings">Let bindings</h3>
+<h3 id="lazy-sequence">Lazy Sequence</h3>
+<p>TODO</p>
+<h2 id="truthy-semantics">Truthy Semantics</h2>
+<p>Values can be evaluated to a Boolean within predicate expressions using the <em>truthy</em> semantic rules below:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>True</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Integer</td>
+<td>Not 0</td>
+</tr>
+<tr>
+<td>Decimal</td>
+<td>Not 0.0</td>
+</tr>
+<tr>
+<td>String</td>
+<td>Not empty</td>
+</tr>
+<tr>
+<td>List</td>
+<td>Not empty</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>Not empty</td>
+</tr>
+<tr>
+<td>Hash</td>
+<td>Not empty</td>
+</tr>
+<tr>
+<td>LazySequence</td>
+<td>Always</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>Always</td>
+</tr>
+</tbody>
+</table>
+<h2 id="variables">Variables</h2>
+<p>Variables are declared using let-binding syntax, with names conforming to <code>[a-Z][a-Z0-9_?]+</code>.
+Bindings are immutable by-default, and can not be reassigned after declaration.</p>
 <pre><code>let x = 1;
 x = 2; // Variable x is not mutable
-
-let mut x = 1;
+</code></pre>
+<p>Variables can be made mutable using the <code>mut</code> keyword, allowing for the binding to be reassigned after declaration.</p>
+<pre><code>let mut x = 1;
 x = 2;
-
-let [x, y, _, ..z] = [1, 2, 3, 4, 5];
+</code></pre>
+<h3 id="destructing">Destructing</h3>
+<p>List collection values can be destructed into desired let-bindings.
+The <code>_</code> placeholder symbol is used to denote an ignored positional binding.
+The <code>..</code> rest symbol is used to collect all the remaining elements into a single <em>List</em> let-binding.</p>
+<pre><code>let [x, y, _, ..z] = [1, 2, 3, 4, 5];
 [x, y, z]; // [1, 2, [4, 5]]
-x = 2; // Variable x is not mutable
-
-let mut [x, y] = [1, 2];
+</code></pre>
+<p>Similar to previous let-bindings, these are immutable by-default.
+Destructed bindings can be made mutable using the <code>mut</code> keyword.</p>
+<pre><code>let mut [x, y] = [1, 2];
 x = 2;
 </code></pre>
-<h3 id="conditionals-with-let-bindings">Conditionals (with let bindings)</h3>
-<pre><code>if x &lt; 10 { 1 } else { 2 }
-if let x = 10 { x } else { 20 }
+<h2 id="operators">Operators</h2>
+<p>Expected arthritic operations on Integer and Decimal values are available, along with intuitive behaviour on other types.</p>
+<pre><code>1 + 1; // 2
+1 + 2.5; // 3
+1.5 + 3.25; // 4.75
+1.5 + 1; // 2.5
+&quot;a&quot; + &quot;b&quot;; // &quot;ab&quot;
+[1] + [2, 3]; // [1, 2, 3]
+{1} + {1, 2}; // {1, 2}
+#{1: &quot;one&quot;} + {2: &quot;two&quot;}; // #{1: &quot;one&quot;, 2: &quot;two}
 </code></pre>
-<h3 id="functions-functions-functions">Functions, functions, functions!</h3>
-<pre><code>let inc = +(1);
-let inc = _ + 1;
-let inc = |x| x + 1;
+<pre><code>2 - 1; // 1
+2 - 1.5; // 0
+1.5 - 1.25; // 0.25
+1.5 - 1; // 0.50
+{1, 2} - {1}; // {2}
+</code></pre>
+<pre><code>2 * 2; // 4
+2.2 * 2; // 4
+&quot;a&quot; * 3; // &quot;aaa&quot;
+[&quot;a&quot;] * 2; // [&quot;a&quot;, &quot;a&quot;]
+</code></pre>
+<pre><code>5 / 2; // 2
+5 / 2.25; // 2
+5.0 / 2; // 2.5
+5.0 / 2.25; // 2.22
+</code></pre>
+<p>Logical <em>OR</em> and <em>AND</em> operations are supported for all values.
+Non-Boolean values are evaluated based on <em>truthy</em> value semantics.</p>
+<pre><code>true || false;
+1 || 0;
+</code></pre>
+<pre><code>true &amp;&amp; true;
+[1] &amp;&amp; {1};
+</code></pre>
+<p>Intuitive equality operations are support for all values.</p>
+<pre><code>1 == 1;
+1.5 == 1.5;
+&quot;a&quot; == &quot;a&quot;;
+true == true;
+[1, 2, 3] == [1, 2, 3];
+{1, 2, 3} == {1, 2, 3};
+#{&quot;a&quot;: 1} == #{&quot;a&quot;: 1};
+</code></pre>
+<pre><code>1 != 2;
+1.5 != 2.0;
+&quot;a&quot; != &quot;b&quot;;
+true != false;
+[1, 2, 3] != [1, 2, 3, 4]
+{1, 2, 3} != {1, 2, 3, 4};
+#{&quot;a&quot;: 1} != #{&quot;b&quot;: 2};
+</code></pre>
+<h2 id="indexing">Indexing</h2>
+<h3 id="list_1">List</h3>
+<p>List indexing is zero-based, with the ability to index from the start (positive index) and end (negative index) of a sequence.
+If an element is not found at the given index <code>nil</code> is returned.</p>
+<pre><code>let list = [1, 2, 3, 4];
 
-map(inc, 1..5); // [2, 3, 4, 5]
-filter(2 != _, 1..5); // [1, 3, 4]
-reduce(+, 1..=5); // 15
-fold(10, +, 1..=5); // 25
+list[0]; // 1
+list[-1]; // 4
+list[4]; // nil
+list[-5]; // nil
 </code></pre>
-<h3 id="function-composition-and-threading">Function composition and threading</h3>
-<pre><code>let inc_dbl = _ + 1 &gt;&gt; |x| x * x;
-inc_dbl(15); // 256
+<p>List slices can be achieved by-way of inclusive/exclusive range indexing.</p>
+<pre><code>list[1..2]; // [2]
+list[1..=2]; // [2, 3]
+list[1..=-1]; // [1, 4]
+</code></pre>
+<h3 id="map_1">Map</h3>
+<p>Map values can be found via their associated key.
+If a Map key is not present within the collection <code>nil</code> is returned.</p>
+<pre><code>let hash_map = #{&quot;a&quot;: 1, &quot;b&quot;: 2};
 
-reduce(*, map(inc_dbl, 1..5));
-// vs
-1..5 |&gt; map(inc_dbl) |&gt; reduce(*);
+hash_map[&quot;a&quot;]; // 1
+hash_map[&quot;c&quot;]; // nil
 </code></pre>
-<h3 id="invocation-with-trailing-lambdas">Invocation with trailing lambdas</h3>
-<p>If the last parameter of a function is a function, then a lambda expression passed as the corresponding argument can be placed outside the parentheses.</p>
-<pre><code>[1, 2, 3] |&gt; each |x| {
-  puts(x);
+<h3 id="string_1">String</h3>
+<p>String indexing follows much of the same semantics as List indexing, with elements instead being UTF-8 characters.
+The returned element is the single UTF-8 character as represented as a String.</p>
+<pre><code>let str = &quot;hello&quot;;
+
+str[0]; // &quot;h&quot;
+str[-1]; // &quot;o&quot;
+str[4]; // nil
+str[-5]; // nil
+</code></pre>
+<p>String slices can be achieved by-way of inclusive/exclusive range indexing.</p>
+<pre><code>str[1..2]; // &quot;e&quot;
+str[1..=2]; // &quot;ll&quot;
+str[1..=-1]; // &quot;ho&quot;
+</code></pre>
+<h2 id="control-structures">Control Structures</h2>
+<h3 id="if">If</h3>
+<p>This expression provides a means of performing conditional logic.
+The supplied predicate expressions is evaluated using <em>truthy</em> value semantics.
+The expression always returns a value; with <code>nil</code> being returned in the case of the alternative branch not being specified and condition not passing.
+Following block expression semantics found elsewhere in the language, unless explicitly stated (via the <code>return</code> keyword) the last statement is implicitly returned as the result.</p>
+<p>Expression without an alternative <code>else</code> branch.</p>
+<pre><code>if 5 &lt; 10 { 1 } // 1
+if 10 &lt; 5 { 1 } // nil
+</code></pre>
+<p>Expression with both a consequence and alternative <code>else</code> branch.</p>
+<pre><code>if 10 &lt; 5 { 1 } else { 2 } // 2
+</code></pre>
+<p>Let-bindings can be declared within the predicate expressions.
+If the binding is <em>truthy</em> then the variables is bound and available with the consequence branch.</p>
+<pre><code>if let x = 10 { x } else { 20 } // 10
+</code></pre>
+<h3 id="return">Return</h3>
+<p>If you wish to return early from a block expression this can be achieved using the <code>return</code> keyword.</p>
+<pre><code>let ten = |x| {
+  if x &gt; 10 {
+    return &quot;&gt; 10&quot;
+  }
+  return &quot;&lt; 10&quot;
 }
-// vs
-each(|x| { puts(x) }, [1, 2, 3]);
-
-[1, 2, 3] |&gt; fold(1) |acc, x| {
-  acc + x * x;
-}
-// vs
-fold(1, |acc, x| acc + x * x, [1, 2, 3]);
+ten(5);
 </code></pre>
-<h3 id="infix-function-calls">Infix function calls</h3>
-<p>Functions which accept two arguments (binary) can be called within the infix position like so:</p>
-<pre><code>includes?([1, 2, 3], 3);
-// vs
-[1, 2, 3] `includes?` 3;
-</code></pre>
-<h3 id="lazy-sequences">Lazy sequences</h3>
-<pre><code>1.. |&gt; filter(|n| n % 2 == 0) |&gt; take(5); // [2, 4, 6, 8, 10]
-
-zip(1.., 2..) |&gt; map(|[x, y]| x * y) |&gt; take(5); // [2, 6, 12, 20, 30]
-</code></pre>
-<h3 id="recursion">Recursion</h3>
-<pre><code>let factorial = |n| if n == 0 { 1 } else { n * factorial(n - 1) };
-</code></pre>
-<h4 id="tail-call-optimization">Tail-call optimization</h4>
-<p>To avoid exhausting the call stack, the above <code>factorial</code> function can be rewritten in a tail-recursive form.</p>
-<pre><code>let factorial = |n| {
-  let recur = |acc, n| if n == 0 { acc } else { recur(acc * n, n - 1) };
-  recur(1, n);
+<h3 id="break">Break</h3>
+<p>If you wish to break early from a <a href="../builtins/">builtin</a> looping construct (i.e <code>fold</code>, <code>reduce</code>, <code>each</code>) this can be achieved with the <code>break</code> keyword.
+In the example below the reduction will be terminated prematurely and the <em>break</em> value will be returned.</p>
+<pre><code>0.. |&gt; reduce |acc, value| {
+  if acc == 10 {
+    break acc
+  } else {
+    acc + value
+  }
 };
 </code></pre>
-<h3 id="closures">Closures</h3>
+<h3 id="match">Match</h3>
+<p>The match expression allows you to perform pattern matching on a given subject.
+If no match is found <code>nil</code> is returned as the expression result.</p>
+<p>Primitive type values can be matched based on equality rules.</p>
+<pre><code>let fibonacci = |n| match n {
+  0 { 0 }
+  1 { 1 }
+  n { fibonacci(n - 1) + fibonacci(n - 2) }
+};
+fibonacci(10);
+</code></pre>
+<p>List patterns can be matched upon and destructed into let-bindings.</p>
+<pre><code>let map = |fn, list| match list {
+  [] { [] }
+  [head] { [fn(head)] }
+  [head, ..tail] { [fn(head), ..map(fn, tail)] }
+};
+map(_ + 1, [1, 2, 3]);
+</code></pre>
+<p>Values within Integer ranges can be matched upon.</p>
+<pre><code>let number = |n| match n {
+  0..5 { &quot;&lt; 5&quot; },
+  6..=7 { &quot;6 or 7&quot; }
+  8.. { &quot;&gt;= 8&quot; }
+};
+number(5);
+</code></pre>
+<p>An optional predicate expression <em>guard</em> can be defined based on a matched pattern.</p>
+<pre><code>let filter = |fn, list| match list {
+  [] { [] }
+  [head] if fn(head) { [head] }
+  [head, ..tail] if fn(head) { [head, ..filter(fn, tail)] }
+  [_, ..tail] { filter(fn, tail) }
+};
+filter(_ != 2, [1, 2, 3]);
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p>Defining functions (closures) within the language is intentionally very easy and syntactically cheap to do.</p>
+<p>The most basic means of creating a function is to define one using the <em>pipe</em> syntax.</p>
+<pre><code>let inc = |x| { x + 1 };
+inc(1);
+</code></pre>
+<p>In the event of a single-line block expression, the brackets can be omitted.</p>
+<pre><code>let inc = |x| x + 1;
+inc(1);
+</code></pre>
+<p>Additionally you can partially apply an existing function, which in-turn will create a new function with the remaining parameter arity.</p>
+<pre><code>let inc = +(1);
+inc(1);
+</code></pre>
+<blockquote>
+<p>This also highlights use of operators being passed around as first-class functions.</p>
+</blockquote>
+<p>The placeholder <code>_</code> symbol can also be used to positional omit parameters in which you wish to leave open for the newly created function.</p>
+<pre><code>let dec = -(_, 1);
+dec(2);
+</code></pre>
+<p>Alternatively binary functions (functions which take two arguments) can be more succinctly written using the following placeholder syntax, borrowed from Scala.</p>
+<pre><code>let inc = 1 + \_;
+let dec = \_ - 1;
+inc(1) == dec(3);
+</code></pre>
+<p>All functions which are declared are Closures, and have access to their outer scope variables.</p>
 <pre><code>let fibonacci_seq = || {
   let mut [a, b] = [0, 1];
   || {
@@ -789,33 +1340,74 @@ zip(1.., 2..) |&gt; map(|[x, y]| x * y) |&gt; take(5); // [2, 6, 12, 20, 30]
     a;
   };
 }();
-1..=5 |&gt; each(|n| puts(&quot;&gt; &quot; + n + &quot;: &quot; + fibonacci_seq()));
-// &quot;&gt; 1: 1&quot;
-// &quot;&gt; 2: 1&quot;
-// &quot;&gt; 3: 2&quot;
-// &quot;&gt; 4: 3&quot;
-// &quot;&gt; 5: 5&quot;
+fibonacci_seq();
+fibonacci_seq();
 </code></pre>
-<h3 id="pattern-matching">Pattern matching</h3>
-<pre><code>let fibonacci = |n| match n {
-  0 { 0 }
-  1 { 1 }
-  n { fibonacci(n - 1) + fibonacci(n - 2) }
+<p>Function arguments can be <em>spread</em> from a List, as well as parameters be collected <em>rest</em> into a List.</p>
+<pre><code>let max = |xs..| xs |&gt; sort(&gt;) |&gt; first;
+max(..[1, 2, 3]);
+</code></pre>
+<h3 id="recursion">Recursion</h3>
+<p>Recursive function invocation is supported.</p>
+<pre><code>let factorial = |n| if n == 0 { 1 } else { n * factorial(n - 1) };
+factorial(10);
+</code></pre>
+<p>Along with <em>Tail-call optimization</em>.
+To avoid exhausting the call stack, the above <code>factorial</code> function can be rewritten in a tail-recursive form.
+In this case the runtime will reuse the function call stack frame upon each iteration.</p>
+<pre><code>let factorial = |n| {
+  let recur = |acc, n| {
+    if n == 0 { acc } else { recur(acc * n, n - 1) }
+  };
+  recur(1, n);
+};
+factorial(10);
+</code></pre>
+<h3 id="composition">Composition</h3>
+<p>Functions can be <a href="https://en.wikipedia.org/wiki/Function_composition">composed</a> together using the <code>&gt;&gt;</code> syntax.</p>
+<pre><code>let inc_dbl = \_ + 1 &gt;&gt; |x| x * x;
+inc_dbl(15);
+</code></pre>
+<pre><code>let parse = lines &gt;&gt; map(split(&quot;,&quot;) &gt;&gt; map(int));
+parse(&quot;1,2\n3,4\n5,6&quot;);
+</code></pre>
+<p>This is syntactic sugar on top of the following expression.</p>
+<pre><code>let parse = |x| {
+  map(|line| map(int, split(&quot;,&quot;, line)), lines(x));
+};
+parse(&quot;1,2\n3,4\n5,6&quot;);
+</code></pre>
+<h3 id="threading">Threading</h3>
+<p>The language leans heavily on functions, and so as to improve readability invocation can be threaded using the <code>|&gt;</code> syntax.</p>
+<pre><code>1..5 |&gt; map(_ + 1) |&gt; reduce(+);
+</code></pre>
+<p>This is syntactic sugar on top of the following expression.</p>
+<pre><code>reduce(+, map(_ + 1, 1..5));
+</code></pre>
+<h3 id="trailing-lambda">Trailing Lambda</h3>
+<p>If the last parameter of a function is a function, then a lambda expression passed as the corresponding argument can be placed outside the parentheses.
+Inspired by <a href="https://kotlinlang.org/docs/lambdas.html#passing-trailing-lambdas">Kotlin</a>, this improves readability and enables rich DSLs to be built on-top of language constructs.</p>
+<pre><code>let mut acc = 0;
+[1, 2, 3] |&gt; each |x| {
+  acc = acc + x;
+}
+acc;
+</code></pre>
+<pre><code>[1, 2, 3] |&gt; fold(1) |acc, x| {
+  acc + x * x;
 };
 </code></pre>
-<pre><code>let step = |face, [y, x]| match [face, [y, x]] {
-  [&quot;N&quot;, [7, 3..6]]   { [&quot;S&quot;, [3 - x, 4]] }
-  [&quot;S&quot;, [3, _]]      { [&quot;N&quot;, [y - 1, x]] }
-  [&quot;E&quot;, [0..3, 1..]] { [&quot;W&quot;, [1 - y, 4]] }
-  [&quot;W&quot;, _]           { [&quot;E&quot;, [y, x - 1]] }
-};
+<p>This is syntactic sugar on top of the following expressions.</p>
+<pre><code>each(|x| { puts(x) }, [1, 2, 3]);
 </code></pre>
-<h3 id="spread-and-rest-operators">Spread and rest operators</h3>
-<pre><code>let a = [2];
-let b = [1, ..a, 3]; // [1, 2, 3]
-
-let sum = |..xs| reduce(+, xs);
-sum(1, 2, 3) == sum(..b) // 6
+<pre><code>fold(1, |acc, x| acc + x * x, [1, 2, 3]);
+</code></pre>
+<h3 id="infix-invocation">Infix invocation</h3>
+<p>Functions which accept two arguments (binary) can be called within the infix position like so:</p>
+<pre><code>[1, 2, 3] `includes?` 3;
+</code></pre>
+<p>This is syntactic sugar on top of the following expression.</p>
+<pre><code>includes?([1, 2, 3], 3);
 </code></pre>
 <h3 id="memoization">Memoization</h3>
 <p>Referential transparent function calls can be memoized using the built-in higher-order function.</p>
@@ -826,11 +1418,13 @@ sum(1, 2, 3) == sum(..b) // 6
     n
   }
 }
-
-fibonacci(50); // 12586269025
+fibonacci(50);
 </code></pre>
-<h3 id="detailed-error-handling">Detailed error handling</h3>
-<p>TODO</p>
+<blockquote>
+<p>This highlights the use of the <em>trailing lambda</em> syntax to produce a rich DSL which looks like a language construct.</p>
+</blockquote>
+<h3 id="builtins">Builtins</h3>
+<p>There is a suite of <a href="../builtins/">builtin functions</a> which help solve many different class of problem.</p>
 
 
 
@@ -871,11 +1465,11 @@ fibonacci(50); // 12586269025
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../assets/javascripts/bundle.fac441b0.min.js"></script>
       
-        <script src="../pkg/santa_lang.js"></script>
+        <script src="../assets/santa_lang.js"></script>
       
-        <script src="../runner.js"></script>
+        <script src="../assets/runner.js"></script>
       
     
   </body>
