@@ -210,12 +210,12 @@ function debugString(val) {
 * @param {object} js_functions
 * @returns {any}
 */
-__exports.run = function(source, js_functions) {
+__exports.aoc_run = function(source, js_functions) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passStringToWasm0(source, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        wasm.run(retptr, ptr0, len0, addHeapObject(js_functions));
+        wasm.aoc_run(retptr, ptr0, len0, addHeapObject(js_functions));
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
         var r2 = getInt32Memory0()[retptr / 4 + 2];
@@ -233,12 +233,12 @@ __exports.run = function(source, js_functions) {
 * @param {object} js_functions
 * @returns {any}
 */
-__exports.test = function(source, js_functions) {
+__exports.aoc_test = function(source, js_functions) {
     try {
         const retptr = wasm.__wbindgen_add_to_stack_pointer(-16);
         const ptr0 = passStringToWasm0(source, wasm.__wbindgen_export_0, wasm.__wbindgen_export_1);
         const len0 = WASM_VECTOR_LEN;
-        wasm.test(retptr, ptr0, len0, addHeapObject(js_functions));
+        wasm.aoc_test(retptr, ptr0, len0, addHeapObject(js_functions));
         var r0 = getInt32Memory0()[retptr / 4 + 0];
         var r1 = getInt32Memory0()[retptr / 4 + 1];
         var r2 = getInt32Memory0()[retptr / 4 + 2];
@@ -473,7 +473,7 @@ function getImports() {
         return ret;
     }, arguments) };
     imports.wbg.__wbg_static_accessor_JS_PERFORMANCE_8477c72d170dc32c = function() {
-        const ret = self.performance;
+        const ret = this.performance;
         return addHeapObject(ret);
     };
     imports.wbg.__wbg_now_c644db5194be8437 = function(arg0) {

@@ -6,13 +6,13 @@ declare namespace wasm_bindgen {
 	* @param {object} js_functions
 	* @returns {any}
 	*/
-	export function run(source: string, js_functions: object): any;
+	export function aoc_run(source: string, js_functions: object): any;
 	/**
 	* @param {string} source
 	* @param {object} js_functions
 	* @returns {any}
 	*/
-	export function test(source: string, js_functions: object): any;
+	export function aoc_test(source: string, js_functions: object): any;
 	/**
 	* @param {string} expression
 	* @param {object | undefined} js_functions
@@ -26,8 +26,8 @@ declare type InitInput = RequestInfo | URL | Response | BufferSource | WebAssemb
 
 declare interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly run: (a: number, b: number, c: number, d: number) => void;
-  readonly test: (a: number, b: number, c: number, d: number) => void;
+  readonly aoc_run: (a: number, b: number, c: number, d: number) => void;
+  readonly aoc_test: (a: number, b: number, c: number, d: number) => void;
   readonly evaluate: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_export_0: (a: number) => number;
   readonly __wbindgen_export_1: (a: number, b: number, c: number) => number;
