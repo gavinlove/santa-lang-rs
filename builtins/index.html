@@ -296,8 +296,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hash" class="md-nav__link">
-    hash
+  <a href="#dict" class="md-nav__link">
+    dict
   </a>
   
 </li>
@@ -1063,8 +1063,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hash" class="md-nav__link">
-    hash
+  <a href="#dict" class="md-nav__link">
+    dict
   </a>
   
 </li>
@@ -1690,7 +1690,7 @@ The following builtin functions are available in <strong>all</strong> runtimes:<
 <h3 id="list">list</h3>
 <p>Returns the List represenation of the given value.</p>
 <pre class="highlight"><code>list(value)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">List</label><label for="__tabbed_1_2">Set</label><label for="__tabbed_1_3">Map</label><label for="__tabbed_1_4">String</label><label for="__tabbed_1_5">Inclusive Range</label><label for="__tabbed_1_6">Exclusive Range</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">List</label><label for="__tabbed_1_2">Set</label><label for="__tabbed_1_3">Dictionary</label><label for="__tabbed_1_4">String</label><label for="__tabbed_1_5">Inclusive Range</label><label for="__tabbed_1_6">Exclusive Range</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">list([1, 2, 3])</code></pre>
@@ -1735,17 +1735,17 @@ The following builtin functions are available in <strong>all</strong> runtimes:<
 </div>
 </div>
 </div>
-<h3 id="hash">hash</h3>
-<p>Returns the (Hash) Map represenation of the given value.</p>
-<pre class="highlight"><code>hash(value)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">List</label><label for="__tabbed_3_2">Map</label></div>
+<h3 id="dict">dict</h3>
+<p>Returns the Dictionary represenation of the given value.</p>
+<pre class="highlight"><code>dict(value)</code></pre>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">List</label><label for="__tabbed_3_2">Dictionary</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Input is a List of List tuples (key, value).</p>
-<pre class="highlight"><code class="language-santa">hash([[1, 2], [3, 4]])</code></pre>
+<pre class="highlight"><code class="language-santa">dict([[1, 2], [3, 4]])</code></pre>
 </div>
 <div class="tabbed-block">
-<pre class="highlight"><code class="language-santa">hash(#{1: 2, 3: 4})</code></pre>
+<pre class="highlight"><code class="language-santa">dict(#{1: 2, 3: 4})</code></pre>
 </div>
 </div>
 </div>
@@ -1753,7 +1753,7 @@ The following builtin functions are available in <strong>all</strong> runtimes:<
 <p>Get an element within a collection, following the rules laid out in <a href="../language/#indexing">Indexing</a>.
 If an element can not be found at that index then <code>nil</code> is returned.</p>
 <pre class="highlight"><code>get(index, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:7"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><input id="__tabbed_4_6" name="__tabbed_4" type="radio" /><input id="__tabbed_4_7" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">List</label><label for="__tabbed_4_2">Set</label><label for="__tabbed_4_3">Map</label><label for="__tabbed_4_4">String</label><label for="__tabbed_4_5">Inclusive Range</label><label for="__tabbed_4_6">Exclusive Range</label><label for="__tabbed_4_7">Unbounded Range</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:7"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><input id="__tabbed_4_5" name="__tabbed_4" type="radio" /><input id="__tabbed_4_6" name="__tabbed_4" type="radio" /><input id="__tabbed_4_7" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">List</label><label for="__tabbed_4_2">Set</label><label for="__tabbed_4_3">Dictionary</label><label for="__tabbed_4_4">String</label><label for="__tabbed_4_5">Inclusive Range</label><label for="__tabbed_4_6">Exclusive Range</label><label for="__tabbed_4_7">Unbounded Range</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">get(1, [1, 2])</code></pre>
@@ -1781,7 +1781,7 @@ If an element can not be found at that index then <code>nil</code> is returned.<
 <h3 id="size">size</h3>
 <p>Get the size of a collection.</p>
 <pre class="highlight"><code>size(collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:6"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><input id="__tabbed_5_6" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">List</label><label for="__tabbed_5_2">Set</label><label for="__tabbed_5_3">Map</label><label for="__tabbed_5_4">String</label><label for="__tabbed_5_5">Inclusive Range</label><label for="__tabbed_5_6">Exclusive Range</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:6"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><input id="__tabbed_5_6" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">List</label><label for="__tabbed_5_2">Set</label><label for="__tabbed_5_3">Dictionary</label><label for="__tabbed_5_4">String</label><label for="__tabbed_5_5">Inclusive Range</label><label for="__tabbed_5_6">Exclusive Range</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">size([1, 2])</code></pre>
@@ -1820,7 +1820,7 @@ If an element can not be found at that index then <code>nil</code> is returned.<
 <h3 id="assoc">assoc</h3>
 <p>Associate the given key/index with the given value in a collection.</p>
 <pre class="highlight"><code>assoc(key, value, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">List</label><label for="__tabbed_7_2">Map</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">List</label><label for="__tabbed_7_2">Dictionary</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">assoc(0, 3, [1, 2])</code></pre>
@@ -1837,7 +1837,7 @@ If an element can not be found at that index then <code>nil</code> is returned.<
 <p>Update the given index/key of a collection using the supplied <code>updater</code> function.
 The <code>updater</code> function is supplied the current value at the given index/key, if not present <code>nil</code> is supplied.</p>
 <pre class="highlight"><code>update(key, updater, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">List</label><label for="__tabbed_8_2">Map</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">List</label><label for="__tabbed_8_2">Dictionary</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">update(0, _ + 1, [1, 2])</code></pre>
@@ -1854,7 +1854,7 @@ The <code>updater</code> function is supplied the current value at the given ind
 <p>Update the given index/key of a collection using the supplied <code>updater</code> function.
 The <code>updater</code> function is supplied the current value at the given index/key, if not present the <em>default</em> value is supplied.</p>
 <pre class="highlight"><code>update_d(key, default, updater, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">List</label><label for="__tabbed_9_2">Map</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">List</label><label for="__tabbed_9_2">Dictionary</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">update_d(0, 0, _ + 1, [1, 2])</code></pre>
@@ -1870,7 +1870,7 @@ The <code>updater</code> function is supplied the current value at the given ind
 <h3 id="map">map</h3>
 <p>Apply a pure function over each element within the given collection.</p>
 <pre class="highlight"><code>map(mapper, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="10:4"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><input id="__tabbed_10_4" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">List</label><label for="__tabbed_10_2">Set</label><label for="__tabbed_10_3">Map</label><label for="__tabbed_10_4">String</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:4"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><input id="__tabbed_10_3" name="__tabbed_10" type="radio" /><input id="__tabbed_10_4" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">List</label><label for="__tabbed_10_2">Set</label><label for="__tabbed_10_3">Dictionary</label><label for="__tabbed_10_4">String</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">map(_ + 1, [1, 2])</code></pre>
@@ -1880,7 +1880,7 @@ The <code>updater</code> function is supplied the current value at the given ind
 </div>
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">map(_ + 1, #{1: 2, 3: 4})</code></pre>
-<p>The <code>mapper</code> function is suppled both the value and key in the context of a Map.</p>
+<p>The <code>mapper</code> function is suppled both the value and key in the context of a Dictionary.</p>
 <pre class="highlight"><code class="language-santa">map(|v, k| "" + k + ": " + v, #{1: 2, 3: 4})</code></pre>
 </div>
 <div class="tabbed-block">
@@ -1910,7 +1910,7 @@ The returned collection is a List.</p>
 <h3 id="filter">filter</h3>
 <p>Return a collection based on a pure predicate function holding truthy for the given element in a collection.</p>
 <pre class="highlight"><code>filter(predicate, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="12:4"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">List</label><label for="__tabbed_12_2">Set</label><label for="__tabbed_12_3">Map</label><label for="__tabbed_12_4">String</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:4"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">List</label><label for="__tabbed_12_2">Set</label><label for="__tabbed_12_3">Dictionary</label><label for="__tabbed_12_4">String</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">filter(_ == 1, [1, 2])</code></pre>
@@ -1920,7 +1920,7 @@ The returned collection is a List.</p>
 </div>
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">filter(_ == 2, #{1: 2, 3: 4})</code></pre>
-<p>The <code>predicate</code> function is suppled both the value and key in the context of a Map.</p>
+<p>The <code>predicate</code> function is suppled both the value and key in the context of a Dictionary.</p>
 <pre class="highlight"><code class="language-santa">map(|_, k| k == 3, #{1: 2, 3: 4})</code></pre>
 </div>
 <div class="tabbed-block">
@@ -1950,7 +1950,7 @@ The returned collection is a List.</p>
 <h3 id="each">each</h3>
 <p>Apply a side-effecting function over each element in the given collection.</p>
 <pre class="highlight"><code>each(side_effect, collection)</code></pre>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:4"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">List</label><label for="__tabbed_14_2">Set</label><label for="__tabbed_14_3">Map</label><label for="__tabbed_14_4">String</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:4"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><input id="__tabbed_14_3" name="__tabbed_14" type="radio" /><input id="__tabbed_14_4" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">List</label><label for="__tabbed_14_2">Set</label><label for="__tabbed_14_3">Dictionary</label><label for="__tabbed_14_4">String</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <pre class="highlight"><code class="language-santa">let mut a = 0;
@@ -1966,7 +1966,7 @@ a;</code></pre>
 <pre class="highlight"><code class="language-santa">let mut a = 0;
 each(|v| a = a + v, #{1: 2, 3: 4});
 a;</code></pre>
-<p>The <code>predicate</code> function is suppled both the value and key in the context of a Map.</p>
+<p>The <code>predicate</code> function is suppled both the value and key in the context of a Dictionary.</p>
 <pre class="highlight"><code class="language-santa">let mut a = 0;
 each(|_, k| a = a + k, #{1: 2, 3: 4});
 a;</code></pre>
@@ -2012,47 +2012,63 @@ a;</code></pre>
 </div>
 </div>
 <h3 id="reduce">reduce</h3>
+<pre class="highlight"><code>reduce(reducer, collection)</code></pre>
 <p>Apply a reduction function over a given collection.
 The initial accumulator value supplied upon first iteration is the first element in the collection.
 If the collection is empty then an error is thrown.</p>
 <h3 id="fold">fold</h3>
+<pre class="highlight"><code>fold(initial, folder, collection)</code></pre>
 <p>Apply a folding function over a given collection.
 If the collection is empty then the initial value is returned.</p>
 <h3 id="fold_s">fold_s</h3>
+<pre class="highlight"><code>fold_s(initial, folder, collection)</code></pre>
 <p>Apply a folding function over a given collection, with optional state which is passed throughout the fold.
 The accumulated value is a List comprised of the first element being the resulting folded value, and other elements being <em>state</em> you wish to pass on to the next iteration.
 Upon completion, the extra state is discarded and the folded value is returned.
 If the collection is empty then the initial folded value is returned.</p>
 <h3 id="find">find</h3>
+<pre class="highlight"><code>find(predicate, collection)</code></pre>
 <p>Apply a pure predicate function over a given collection, returning the first element where the predicate holds truthy.</p>
 <h3 id="scan">scan</h3>
+<pre class="highlight"><code>scan(initial, mapper, collection)</code></pre>
 <h3 id="flat_map">flat_map</h3>
+<pre class="highlight"><code>flat_map(mapper, collection)</code></pre>
 <p>Apply a function over a given collection with the resulting mapped List results being flatterned into a single List.</p>
 <h3 id="filter_map">filter_map</h3>
+<pre class="highlight"><code>filter_map(mapper, collection)</code></pre>
 <p>Apply a map function over a given collection and filter the mapped values based on the values being truthy.
 This is a convience function for the common place <code>map(..) |&gt; filter(..)</code> pattern.</p>
 <h3 id="find_map">find_map</h3>
+<pre class="highlight"><code>find_map(mapper, collection)</code></pre>
 <p>Apply a map function over a given collection and find the first mapped element where the predicate holds truthy.
 This is a convience function for the common place <code>map(..) |&gt; find(..)</code> pattern.</p>
 <h3 id="count">count</h3>
+<pre class="highlight"><code>count(predicate, collection)</code></pre>
 <p>Count the total number of elements where the pure predicate function holds truthy.</p>
 <h3 id="zip">zip</h3>
+<pre class="highlight"><code>zip(collection, ..collections)</code></pre>
 <p>Takes any number of iterables as an argument and aggregates them together producing a List/Lazy Sequence of List tuples.
 Each List tuple contains elements of all iterables occuring at the same position, stopping when the shortest iterables is exhausted.
 If all the iterables have a finite size then a List is returned, else a Lazy Sequence is produced.</p>
 <h3 id="sum">sum</h3>
+<pre class="highlight"><code>sum(collection)</code></pre>
 <p>Sum all the Integer elements within a collection.</p>
 <h3 id="max">max</h3>
+<pre class="highlight"><code>max(..values)</code></pre>
 <p>Find the largest (maxium) elemement within a collection.</p>
 <h3 id="min">min</h3>
+<pre class="highlight"><code>min(..values)</code></pre>
 <p>Find the smallest (minimum) elemement within a collection.</p>
 <h3 id="skip">skip</h3>
+<pre class="highlight"><code>skip(total, collection)</code></pre>
 <p>Skip a number of elements within the a collection.
 If the collection is a Lazy Sequence the skip is applied when the collection is resolved.</p>
 <h3 id="take">take</h3>
+<pre class="highlight"><code>take(total, collection)</code></pre>
 <p>Take a number of elements from a collection.
 If the collection is a Lazy Sequence then the collection is resolved with any outstanding operations (<code>map</code>, <code>skip</code> etc.) being applied.</p>
 <h3 id="sort">sort</h3>
+<pre class="highlight"><code>sort(comparator, collection)</code></pre>
 <p>Sort the collection based on a supplied pure comparator function.
 The comparator function take in two values (a, b) and can either return:</p>
 <ul>
@@ -2060,105 +2076,155 @@ The comparator function take in two values (a, b) and can either return:</p>
 <li>Integer value, with a negative value signifying <em>a &lt; b</em>, zero signifying <em>a == b</em>, and a positive value signifying <em>a &gt; b</em>.</li>
 </ul>
 <h3 id="reverse">reverse</h3>
+<pre class="highlight"><code>reverse(collection)</code></pre>
 <p>Reverse the order of a given List collection.</p>
 <h3 id="repeat">repeat</h3>
+<pre class="highlight"><code>repeat(value)</code></pre>
 <p>Generate a Lazy Sequence which repeats the provided value indefinitely.</p>
 <h3 id="cycle">cycle</h3>
+<pre class="highlight"><code>cycle(list)</code></pre>
 <p>Generate a Lazy Sequence which cycles through each element in a List indefinitely, looping back to the start once exhausted.</p>
 <h3 id="iterate">iterate</h3>
+<pre class="highlight"><code>iterate(generator, initial)</code></pre>
 <p>Generate a Lazy Sequence which takes a pure function and applies the previous result (starting with an initial value) upon each iteration.</p>
 <h3 id="keys">keys</h3>
-<p>Return the <em>keys</em> in a given Map as a List.</p>
+<pre class="highlight"><code>keys(dictionary)</code></pre>
+<p>Return the <em>keys</em> in a given Dictionary as a List.</p>
 <h3 id="values">values</h3>
-<p>Return the <em>values</em> in a given Map as a List.</p>
+<pre class="highlight"><code>values(dictionary)</code></pre>
+<p>Return the <em>values</em> in a given Dictionary as a List.</p>
 <h3 id="first">first</h3>
+<pre class="highlight"><code>first(collection)</code></pre>
 <p>Return the first element within the collection (aka head).</p>
 <h3 id="second">second</h3>
+<pre class="highlight"><code>second(collection)</code></pre>
 <p>Return the second element within the collection.</p>
 <h3 id="rest">rest</h3>
+<pre class="highlight"><code>rest(collection)</code></pre>
 <p>Return the collection with the first element omitted (aka tail).</p>
 <h3 id="union">union</h3>
+<pre class="highlight"><code>union(..values)</code></pre>
 <p>Return the elements which are found in <strong>any</strong> of the provided collections as a Set.</p>
 <h3 id="intersection">intersection</h3>
+<pre class="highlight"><code>intersection(..values)</code></pre>
 <p>Return the elements which are found in <strong>all</strong> of the provided collections as a Set.</p>
 <h3 id="rotate">rotate</h3>
+<pre class="highlight"><code>rotate(steps, collection)</code></pre>
 <p>Rotate a given List a number of steps, moving the end item to the front of the List.
 If the step number is positive the rotation will go forward.
 If the step number is negative the rotaion will go backwards, with the first item moving to the end of the List.</p>
 <h3 id="chunk">chunk</h3>
+<pre class="highlight"><code>chunk(size, collection)</code></pre>
 <p>Split a List into chunks based on a given size.
 If the List size is not divisible by the chunk size, the last chunk will have fewer than the desired chunk size.</p>
 <h3 id="combinations">combinations</h3>
+<pre class="highlight"><code>combinations(size, collection)</code></pre>
 <p>Generate a Lazy Sequence which produces all the possible combinations of a desired number of elements from within a List.</p>
 <h3 id="includes">includes?</h3>
+<pre class="highlight"><code>includes?(collection, value)</code></pre>
 <p>Predicate to assert if a value is present within a given collection.</p>
 <h3 id="excludes">excludes?</h3>
+<pre class="highlight"><code>excludes?(collection, value)</code></pre>
 <p>Predicate to assert if a value is not present within a given collection.</p>
 <h3 id="any">any?</h3>
+<pre class="highlight"><code>any?(predicate, collection)</code></pre>
 <p>Predicate to assert if any value within the collection hold truthy based on the supplied pure predicate function.</p>
 <h3 id="all">all?</h3>
+<pre class="highlight"><code>all?(predicate, collection)</code></pre>
 <p>Predicate to assert if all values within the collection hold truthy based on the supplied pure predicate function.</p>
 <h2 id="math">Math</h2>
 <h3 id="abs">abs</h3>
+<pre class="highlight"><code>abs(value)</code></pre>
 <p>Return the absolute value of a number.</p>
 <h3 id="vec_add">vec_add</h3>
+<pre class="highlight"><code>vec_add(a, b)</code></pre>
 <p>Sum two Lists together using Vector addition.</p>
 <h3 id="signum">signum</h3>
+<pre class="highlight"><code>signum(value)</code></pre>
 <p>Return the sign (<code>-1, 0, 1</code>) for the given value.</p>
 <h2 id="bitwise">Bitwise</h2>
 <h3 id="bit_and">bit_and</h3>
+<pre class="highlight"><code>bit_and(a, b)</code></pre>
 <p>Return an Integer whose binary representation has a 1 in each bit position for which the corresponding bits of both operands are 1.</p>
 <h3 id="bit_or">bit_or</h3>
+<pre class="highlight"><code>bit_or(a, b)</code></pre>
 <p>Return an Integer whose binary representation has a 1 in each bit position for which the corresponding bits of either or both operands are 1.</p>
 <h3 id="bit_xor">bit_xor</h3>
+<pre class="highlight"><code>bit_xor(a, b)</code></pre>
 <p>Return an Integer whose binary representation has a 1 in each bit position for which the corresponding bits of either but not both operands are 1.</p>
 <h3 id="bit_shift_left">bit_shift_left</h3>
+<pre class="highlight"><code>bit_shift_left(a, b)</code></pre>
 <p>Return an Integer whose binary representation is the first operand shifted by the specified number of bits to the left.</p>
 <h3 id="bit_shift_right">bit_shift_right</h3>
+<pre class="highlight"><code>bit_shift_right(a, b)</code></pre>
 <p>Return an Integer whose binary representation is the first operand shifted by the specified number of bits to the right.</p>
 <h2 id="string">String</h2>
 <h3 id="int">int</h3>
+<pre class="highlight"><code>int(value)</code></pre>
 <p>Attempt to parse the provided value into an Integer represenation.
 Upon failure <code>nil</code> is returned.</p>
 <h3 id="ints">ints</h3>
+<pre class="highlight"><code>ints(value)</code></pre>
 <p>Return all parseable Integer values (as per <a href="#int"><code>int</code></a>) from a String value as a List.
 If no Integers are found and empty List is returned.</p>
 <h3 id="lines">lines</h3>
+<pre class="highlight"><code>lines(value)</code></pre>
 <p>Split a given String into a List of Strings, seperated on new lines <code>\n</code>.</p>
 <h3 id="split">split</h3>
+<pre class="highlight"><code>split(seperator, value)</code></pre>
 <p>Split a given String into a List of Strings, seperated based on the provided value.</p>
 <h3 id="regex_match">regex_match</h3>
+<pre class="highlight"><code>regex_match(pattern, value)</code></pre>
 <p>Match and capture values from a subject String based on a provided Regular Expression.
 Captured values are returned as a List of Strings.
 If no match/capture can be found an empty List is returned.</p>
 <h3 id="regex_match_all">regex_match_all</h3>
+<pre class="highlight"><code>regex_match_all(pattern, value)</code></pre>
 <p>Match and capture all values from a subject String based on a provided Regular Expression.
 Captured values are returned as a List of Strings.
 If no match/capture can be found an empty List is returned.</p>
 <h2 id="miscellaneous">Miscellaneous</h2>
 <h3 id="range">range</h3>
+<pre class="highlight"><code>range(from, to, step)</code></pre>
 <p>Generate an <a href="../language/#inclusive-range">Inclusive Range</a> using a custom desired step value (not the default +1, -1).</p>
 <h3 id="id">id</h3>
+<pre class="highlight"><code>id(value)</code></pre>
 <p>Return the value passed in as an argument.</p>
 <h3 id="memoize">memoize</h3>
+<pre class="highlight"><code>memoize(function)</code></pre>
 <p>Return a function which wraps a given pure function <a href="../language/#memoization">memoizing</a> invocation calls for performance.
 This is a trade-off between space and time complexity.</p>
 <h3 id="evaluate">evaluate</h3>
+<pre class="highlight"><code>evaluate(source)</code></pre>
 <h3 id="type">type</h3>
+<pre class="highlight"><code>type(value)</code></pre>
 <h2 id="operators">Operators</h2>
 <h3 id="_1">+</h3>
+<pre class="highlight"><code>+(a, b)</code></pre>
 <h3 id="-">-</h3>
+<pre class="highlight"><code>-(a, b)</code></pre>
 <h3 id="_2">*</h3>
+<pre class="highlight"><code>*(a, b)</code></pre>
 <h3 id="_3">/</h3>
+<pre class="highlight"><code>/(a, b)</code></pre>
 <h3 id="_4">%</h3>
+<pre class="highlight"><code>%(a, b)</code></pre>
 <h3 id="_5">==</h3>
+<pre class="highlight"><code>==(a, b)</code></pre>
 <h3 id="_6">!=</h3>
+<pre class="highlight"><code>!=(a, b)</code></pre>
 <h3 id="_7">&lt;</h3>
+<pre class="highlight"><code>&lt;(a, b)</code></pre>
 <h3 id="_8">&lt;=</h3>
+<pre class="highlight"><code>&lt;=(a, b)</code></pre>
 <h3 id="_9">&gt;</h3>
+<pre class="highlight"><code>&gt;(a, b)</code></pre>
 <h3 id="_10">&gt;=</h3>
+<pre class="highlight"><code>&gt;=(a, b)</code></pre>
 <h3 id="or">or</h3>
+<pre class="highlight"><code>or(a, b)</code></pre>
 <h3 id="and">and</h3>
+<pre class="highlight"><code>and(a, b)</code></pre>
 
 
 

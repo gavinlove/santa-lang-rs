@@ -344,8 +344,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
   </a>
   
 </li>
@@ -417,8 +417,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map_1" class="md-nav__link">
-    Map
+  <a href="#dictionary_1" class="md-nav__link">
+    Dictionary
   </a>
   
 </li>
@@ -782,8 +782,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map" class="md-nav__link">
-    Map
+  <a href="#dictionary" class="md-nav__link">
+    Dictionary
   </a>
   
 </li>
@@ -855,8 +855,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#map_1" class="md-nav__link">
-    Map
+  <a href="#dictionary_1" class="md-nav__link">
+    Dictionary
   </a>
   
 </li>
@@ -1053,16 +1053,16 @@ set |&gt; push(4); // {1, 2, 3, 4};
 set; // {1, 2, 3}</code></pre>
 <p>Most types can be stored within a Set, except for Lazy Sequences and Functions.</p>
 <pre class="highlight"><code class="language-santa">let set = {1, || 1}; // Error</code></pre>
-<h4 id="map">Map</h4>
+<h4 id="dictionary">Dictionary</h4>
 <p>Represents an unordered association between arbitrary keys and values.</p>
-<pre class="highlight"><code class="language-santa">let homogeneous_map = #{"a": 1, "b": 2};
-let heterogeneous_map = #{[1]: 1.5, 2: true, homogeneous_map};</code></pre>
-<pre class="highlight"><code class="language-santa">let hash_map = #{"a": 1};
-hash_map |&gt; assoc("a", 2); // #{"a": 2}
-hash_map; // #{"a": 1}</code></pre>
-<p>Most types can be used as Map keys, except for Lazy Sequences and Functions.</p>
+<pre class="highlight"><code class="language-santa">let homogeneous_dict = #{"a": 1, "b": 2};
+let heterogeneous_dict = #{[1]: 1.5, 2: true, homogeneous_dict};</code></pre>
+<pre class="highlight"><code class="language-santa">let dictionary = #{"a": 1};
+dictionary |&gt; assoc("a", 2); // #{"a": 2}
+dictionary; // #{"a": 1}</code></pre>
+<p>Most types can be used as Dictionary keys, except for Lazy Sequences and Functions.</p>
 <pre class="highlight"><code class="language-santa">let attempted_key = || 1;
-let hash_map = #{attempted_key: "one"}; // Error</code></pre>
+let dictionary = #{attempted_key: "one"}; // Error</code></pre>
 <h3 id="lazy-sequence">Lazy Sequence</h3>
 <p>The language supports the concept of Lazy Sequences, which among other benefits, unlock the ability to produce infinite sequences.
 Both bounded (inclusive, exclusive) and unbounded (infinite) <a href="#range">Ranges</a> are examples of an Lazy Sequence.
@@ -1112,7 +1112,7 @@ Functions (such as <code>filter</code> and <code>map</code>) are applied <strong
 <td>Not empty</td>
 </tr>
 <tr>
-<td>Hash</td>
+<td>Dictionary</td>
 <td>Not empty</td>
 </tr>
 <tr>
@@ -1203,13 +1203,13 @@ list[-5]; // nil</code></pre>
 list[1..2]; // [2]
 list[1..=2]; // [2, 3]
 list[1..=-1]; // [2, 1, 4]</code></pre>
-<h3 id="map_1">Map</h3>
-<p>Map values can be found via their associated key.
-If a Map key is not present within the collection <code>nil</code> is returned.</p>
-<pre class="highlight"><code class="language-santa">let hash_map = #{"a": 1, "b": 2};
+<h3 id="dictionary_1">Dictionary</h3>
+<p>Dictionary values can be found via their associated key.
+If a Dictionary key is not present within the collection <code>nil</code> is returned.</p>
+<pre class="highlight"><code class="language-santa">let dictionary = #{"a": 1, "b": 2};
 
-hash_map["a"]; // 1
-hash_map["c"]; // nil</code></pre>
+dictionary["a"]; // 1
+dictionary["c"]; // nil</code></pre>
 <h3 id="string_1">String</h3>
 <p>String indexing follows much of the same semantics as List indexing, with elements instead being UTF-8 characters.
 The returned element is the single UTF-8 character as represented as a String.</p>
