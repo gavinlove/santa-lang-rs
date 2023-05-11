@@ -1,5 +1,8 @@
 {
   "name": "santa-wasm",
+  "collaborators": [
+    "Edd Mann <the@eddmann.com>"
+  ],
   "version": "0.0.1",
   "files": [
     "santa_lang_bg.wasm",
