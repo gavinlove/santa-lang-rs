@@ -460,7 +460,7 @@ function getImports() {
         return addHeapObject(ret);
     }, arguments) };
     imports.wbg.__wbg_static_accessor_JS_PERFORMANCE_8477c72d170dc32c = function() {
-        const ret = this.performance;
+        const ret = self.performance;
         return addHeapObject(ret);
     };
     imports.wbg.__wbg_now_c644db5194be8437 = function(arg0) {
