@@ -205,14 +205,6 @@ function debugString(val) {
     // TODO we could test for more things here, like `Set`s and `Map`s.
     return className;
 }
-
-function handleError(f, args) {
-    try {
-        return f.apply(this, args);
-    } catch (e) {
-        wasm.__wbindgen_export_2(addHeapObject(e));
-    }
-}
 /**
 * @param {string} source
 * @param {object} js_functions
@@ -281,6 +273,14 @@ __exports.evaluate = function(expression, js_functions) {
         wasm.__wbindgen_add_to_stack_pointer(16);
     }
 };
+
+function handleError(f, args) {
+    try {
+        return f.apply(this, args);
+    } catch (e) {
+        wasm.__wbindgen_export_2(addHeapObject(e));
+    }
+}
 
 async function load(module, imports) {
     if (typeof Response === 'function' && module instanceof Response) {
@@ -459,10 +459,14 @@ function getImports() {
         const ret = getObject(arg0).apply(getObject(arg1), getObject(arg2));
         return addHeapObject(ret);
     }, arguments) };
-    imports.wbg.__wbg_now_06b2b86fa9cd902b = function() { return handleError(function () {
-        const ret = Performance.now();
+    imports.wbg.__wbg_static_accessor_JS_PERFORMANCE_8477c72d170dc32c = function() {
+        const ret = globalThis.performance;
+        return addHeapObject(ret);
+    };
+    imports.wbg.__wbg_now_c644db5194be8437 = function(arg0) {
+        const ret = getObject(arg0).now();
         return ret;
-    }, arguments) };
+    };
     imports.wbg.__wbg_push_49c286f04dd3bf59 = function(arg0, arg1) {
         const ret = getObject(arg0).push(getObject(arg1));
         return ret;

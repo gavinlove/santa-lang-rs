@@ -31,8 +31,8 @@ declare interface InitOutput {
   readonly evaluate: (a: number, b: number, c: number, d: number) => void;
   readonly __wbindgen_export_0: (a: number) => number;
   readonly __wbindgen_export_1: (a: number, b: number, c: number) => number;
-  readonly __wbindgen_export_2: (a: number) => void;
   readonly __wbindgen_add_to_stack_pointer: (a: number) => number;
+  readonly __wbindgen_export_2: (a: number) => void;
 }
 
 /**
